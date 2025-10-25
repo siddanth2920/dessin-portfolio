@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./Projects.css";
 import { supabase } from "../lib/superBaseClient";
+import Loading from "./Loading"
 
 interface Project {
   id: number;
@@ -67,7 +68,7 @@ const Projects: React.FC = () => {
         fetchProjects();
     }, []);
 
-    if (loading) return <p>Loading projects...</p>;
+   if (loading) return <Loading />;
 
   return (
     <div className="projects-page">

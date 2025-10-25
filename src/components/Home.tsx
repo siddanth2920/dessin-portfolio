@@ -3,6 +3,7 @@ import Header from "./Header";
 import "./Home.css";
 import Carousel from './carousel';
 import TestimonialCard from './testimonalcard';
+import ProjectCard from "./FeatureProjects";
 
 const Home: React.FC = () => {
       const testimonials = [
@@ -22,6 +23,32 @@ const Home: React.FC = () => {
         project: 'Contemporary Office Space',
       },
     ];
+    const projects = [
+    {
+      title: 'Modern Minimalist Villa',
+      category: 'Residential',
+      location: 'Jubilee Hills, Hyderabad',
+      year: '2024',
+      description: 'A stunning 4000 sq ft villa featuring clean lines, neutral tones, and abundant natural light.',
+      imageUrl: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800',
+    },
+    {
+      title: 'Contemporary Office Space',
+      category: 'Commercial',
+      location: 'Banjara Hills, Hyderabad',
+      year: '2023',
+      description: 'A 6000 sq ft tech office designed to inspire creativity and collaboration.',
+      imageUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800',
+    },
+    {
+      title: 'Luxury Penthouse',
+      category: 'Residential',
+      location: 'Gachibowli, Hyderabad',
+      year: '2023',
+      description: 'An opulent 5000 sq ft penthouse with panoramic city views and sophisticated design.',
+      imageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800',
+    },
+  ];
   return (
     <div className="home">
       <Header />
@@ -32,15 +59,33 @@ const Home: React.FC = () => {
           <p className="subtitle">Design + Space Planning</p>
         </div>
       </section>
-
-      <section className="featured-projects">
+      <section className="py-20 px-4" style={{ backgroundColor: '#F5F0ED' }}>
+        <div className="max-w-7xl mx-auto">
+          <h2
+            className="text-4xl md:text-5xl font-light tracking-[0.1em] text-center mb-4"
+            style={{ color: '#5D4157', textAlign: 'center' }}
+          >
+            FEATURED PROJECTS
+          </h2>
+          <p className="text-center mb-12" style={{ color: '#8B6F7F', textAlign: 'center'  }}>
+            A glimpse into our recent transformations
+          </p>
+          
+          <Carousel autoPlay={true} autoPlayInterval={5000}>
+            {projects.map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))}
+          </Carousel>
+        </div>
+      </section>
+      {/* <section className="featured-projects">
         <h2>Featured Projects</h2>
         <div className="projects-grid">
           <div className="project-card">Project One</div>
           <div className="project-card">Project Two</div>
           <div className="project-card">Project Three</div>
         </div>
-      </section>
+      </section> */}
 
       {/* <section className="testimonials">
         <h2>What Our Clients Say</h2>
