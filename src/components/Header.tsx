@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.css";
 import { useNavigate } from "react-router-dom";
+import dessinLogo from '../assets/dessinlogo.png';
 
 const Header: React.FC = () => {
    const navigate = useNavigate();
@@ -8,7 +9,7 @@ const Header: React.FC = () => {
     <header className="header">
      <div className="logo-container" onClick={() => navigate("/home")}>
         <img
-          src="https://pwdycjzkitjmsvvbwwqs.supabase.co/storage/v1/object/public/projectimages/dessinlogo.png"
+          src={dessinLogo}
           alt="Dessin Logo"
           className="logo-img"
         />

@@ -22,15 +22,14 @@
   width: 48px;
   height: 48px;
   object-fit: contain;
-  border-radius: 50%;
+  border-radius: 15%;
 }
 
 .logo-text {
   font-family: "Playfair Display", serif;
   font-size: 1.8rem;
   letter-spacing: 2px;
-  color: #111;
-  font-weight: 600;
+  color: #5D4157;
 }
 
 .logo {
@@ -39,20 +38,6 @@
   font-weight: 600;
   letter-spacing: 1px;
   color: #bfa37a;
-}
-.logo-img {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  border-radius: 50%;
-}
-
-.logo-text {
-  font-family: "Playfair Display", serif;
-  font-size: 1.8rem;
-  letter-spacing: 2px;
-  color: #111;
-  font-weight: 600;
 }
 
 .nav ul {
